@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Material 3 inspired colors */
+  --color-m3-primary: #6750A4;
+  --color-m3-on-primary: #FFFFFF;
+  --color-m3-primary-container: #EADDFF;
+  --color-m3-on-primary-container: #21005D;
+  
+  --color-m3-secondary: #625B71;
+  --color-m3-on-secondary: #FFFFFF;
+  --color-m3-secondary-container: #E8DEF8;
+  --color-m3-on-secondary-container: #1D192B;
+  
+  --color-m3-surface: #FEF7FF;
+  --color-m3-on-surface: #1D1B20;
+  --color-m3-surface-variant: #E7E0EB;
+  --color-m3-on-surface-variant: #49454F;
+  
+  --color-m3-outline: #79747E;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+}
